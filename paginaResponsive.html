@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/9f760357f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="paginaResponsiveStyle.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Presentación</title>
+</head>
+
+<body>
+
+    <head>
+        <!--barra de navegación bootstrap-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+
+            <a class="logo" href="#">Agustín</a>
+            <button class="nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class='bx bx-menu'></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">Acerca de mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </head>
+    <main>
+        <section class="main__home">
+            <div class="main__home-photo" id="home">
+                <img src="miFotoCuadrada.jpg">
+            </div>
+            <div class="main__home-presentation">
+                <div class="main__home-text">
+                    <p>Hola! Mi nombre es</p>
+                    <h1 class="title">Agustín Mandolesi</h1>
+                    <h2>Desarrollador Web</h2>
+                    <p>¡Ponte en contacto conmigo!</p>
+                    <a href="#contact"><input class="button" type="button" value="Contacto"></a>
+                </div>
+                <div class="main__home-floating-items">
+                    <div class="floating-items__light-mode">
+                        <i class='bx bx-moon' id="dark-mode"></i>
+                    </div>
+                    <div class="floating-items__language">
+                        <i class='bx bx-world' id="language"></i>
+                        <p id="lang">Es</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main__about-me">
+            <h2 class="subtitle">Acerca de mí</h2>
+            <div id="about-me">
+                <div class="about-me-container">
+                    <video loop autoplay muted preload="auto">
+                        <source src="programar.mp4">
+                    </video>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos illum in voluptates deserunt aut omnis.</p>
+                        <p><i class='bx bxs-user'></i> Agustín Mandolesi</p>
+                        <p><i class='bx bxs-phone'></i> +5492613727377</p>
+                        <p><i class='bx bxs-envelope'></i> agusmando25@gmail.com</p>
+                        <a href="https://drive.google.com/file/d/1OmHcRGtikTf5r_GzR73tA7dIp53TKyhG/view?usp=sharing" target="_blank" download="Currículum Agustín Mandolesi" class="button"><i class='bx bx-download'></i> Descargar CV</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--(este video se debe acortar o cambiar por un gif)-->
+        </section>
+        <section class="main__skills">
+            <h2 class="subtitle">Habilidades</h2>
+            <div class="main__skills-container" id="skills">
+
+                <div class="skills-container">
+                    <i class='bx bx-code-curly'></i>
+                    <div class="skills-content">
+                        <div class="skills-visible-dropdown">
+                            <span>Desarrollo Frontend</span>
+                            <i class='bx bx-chevron-down'></i>
+                            <div class="skills-details-container skills-closed">
+                                <div>
+                                    <div class="skills-details">
+                                        <span>HTML</span>
+                                        <span>80%</span>
+
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-html-bar"></span></span>
+                                </div>
+                                <div>
+                                    <div class="skills-details">
+                                        <span>CSS</span>
+                                        <span>70%</span>
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-css-bar"></span></span>
+                                </div>
+                                <div>
+                                    <div class="skills-details">
+                                        <span>JAVASCRIPT</span>
+                                        <span>20%</span>
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-javascript-bar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <i class='bx bx-server'></i>
+                    <div class="skills-content">
+                        <div class="skills-visible-dropdown">
+                            <span>Desarrollo Backend</span>
+                            <i class='bx bx-chevron-down'></i>
+                            <div class="skills-details-container skills-closed">
+                                <div>
+                                    <div class="skills-details">
+                                        <span>JAVA</span>
+                                        <span>80%</span>
+
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-java-bar"></span></span>
+                                </div>
+                                <div>
+                                    <div class="skills-details">
+                                        <span>SPRINGBOOT</span>
+                                        <span>60%</span>
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-springboot-bar"></span></span>
+                                </div>
+                                <div>
+                                    <div class="skills-details">
+                                        <span>MYSQL</span>
+                                        <span>70%</span>
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-mysql-bar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <i class='bx bx-brush'></i>
+                    <div class="skills-content">
+                        <div class="skills-visible-dropdown">
+                            <span>Diseño</span>
+                            <i class='bx bx-chevron-down'></i>
+                            <div class="skills-details-container skills-closed">
+                                <div>
+                                    <div class="skills-details">
+                                        <span>PREMIERE PRO</span>
+                                        <span>70%</span>
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-premiere-pro-bar"></span></span>
+                                </div>
+                                <div>
+                                    <div class="skills-details">
+                                        <span>PHOTOSHOP</span>
+                                        <span>40%</span>
+                                    </div>
+                                    <span class="skills-details-bar"><span class="skill-photoshop-bar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main__portfolio" id="portfolio">
+            <h2 class=" subtitle">Portafolio</h2>
+            <div class="main__portfolio-container">
+                <i class='bx bx-chevron-left'></i>
+                <div class="portfolio show-portfolio">
+                    <img class="portfolio-item" src="./portfolio/paginaPortafolio.PNG" alt="">
+                </div>
+                <div class="portfolio">
+                    <img class="portfolio-item" src="./portfolio/inmobiAr.PNG" alt="">
+                </div>
+                <i class='bx bx-chevron-right'></i>
+            </div>
+        </section>
+        <section class="main__contact">
+            <h2 class="subtitle">Contacto</h2>
+            <p>Envíeme un mensaje</p>
+            <div class="main__contact-container" id="contact">
+                <input class="contact-form-item" type="text" placeholder="Nombre">
+                <input class="contact-form-item" type="email" placeholder="Email">
+                <input class="contact-form-item" type="text" placeholder="Asunto">
+                <textarea class="contact-form-item" placeholder="Escriba su mensaje aquí" cols="30" rows="10"></textarea>
+                <input class="button" type="button" value="Enviar">
+
+            </div>
+        </section>
+        <div class="scroll-top-container" onclick="location.href='#home'">
+            <input type="button" class="scroll-top button" value="Ir arriba">
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h1>Agustín</h1>
+            <div class="social-media">
+                <a href="mailto:agusmando25@gmail.com" target="_blank"><i class='bx bxs-envelope'></i></i></a>
+                <a href="#" target="_blank"><i class='bx bxl-git'></i></a>
+                <a href="https://www.linkedin.com/in/agustin-mandolesi/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <p>Copyright 2021 © Agustín Mandolesi</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+
+</html>
