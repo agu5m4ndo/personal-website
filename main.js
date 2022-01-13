@@ -12,7 +12,10 @@ let dropdownSkill = document.getElementsByClassName("skills-visible-dropdown"),
 //slider variables
 let arrowLeft = document.getElementsByClassName("bx-chevron-left"),
     arrowRight = document.getElementsByClassName("bx-chevron-right"),
-    portfolioArray = document.getElementsByClassName("portfolio");
+    portfolioArray = document.getElementsByClassName("portfolio"),
+    portfolioItem = document.getElementsByClassName("portfolio-item"),
+    contador = 0,
+    linksArray = ["https://agu5m4ndo.github.io/portfolio/", "https://agu5m4ndo.github.io/inmobiar/"];
 
 //scroll up variable 
 let scrollTop = document.getElementsByClassName("scroll-top");
@@ -105,6 +108,9 @@ function slideRight() {
                 portfolioArray[index].classList.remove("show-portfolio");
                 portfolioArray[index].classList.remove("leave-right");
             }, 300);
+            contador++;
+            console.log(contador + ", " + linksArray[contador]);
+            portfolioItem[portfolioItem.length - 1].href = linksArray[contador];
             portfolioArray[index + 1].classList.add("arrive-right");
             portfolioArray[index + 1].classList.add("show-portfolio");
             setTimeout(() => {
@@ -120,7 +126,6 @@ arrowRight[0].addEventListener("click", slideRight, true);
 function slideLeft() {
     for (let index = 0; index < portfolioArray.length; index++) {
         if (portfolioArray[index].classList.contains("show-portfolio") && (index > 0)) {
-
             portfolioArray[index].classList.add("leave-left");
             setTimeout(() => {
                 portfolioArray[index].classList.remove("show-portfolio");
@@ -128,6 +133,9 @@ function slideLeft() {
             }, 300);
             portfolioArray[index - 1].classList.add("arrive-left");
             portfolioArray[index - 1].classList.add("show-portfolio");
+            contador--;
+            console.log(contador + ", " + linksArray[contador]);
+            portfolioItem[portfolioItem.length - 1].href = linksArray[contador];
             setTimeout(() => {
                 portfolioArray[index - 1].classList.remove("arrive-left");
             }, 300);
@@ -142,7 +150,6 @@ arrowLeft[0].addEventListener("click", slideLeft, true);
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
         scrollTop[0].classList.add("active");
-        console.log("no funca");
     } else {
         scrollTop[0].classList.remove("active");
     }
