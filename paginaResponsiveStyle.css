@@ -346,6 +346,12 @@ video {
     background-color: var(--main-color);
 }
 
+.skill-illustrator-bar {
+    width: 20%;
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
 .main__portfolio {
     display: flex;
 }
