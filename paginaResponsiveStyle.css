@@ -23,11 +23,7 @@
     --form-placeholder: #999;
     --navbar-color: rgba(0, 0, 0, .5);
     --navbar-color-hover: #000;
-    --row-size: 63px;
-}
-
-html {
-    min-height: 100vh;
+    --row-size: 73.5px;
 }
 
 body {
@@ -60,6 +56,9 @@ p {
 li {
     list-style: none;
 }
+
+
+/* =================================NAVBAR============================= */
 
 nav {
     width: 100%;
@@ -114,7 +113,7 @@ nav {
 }
 
 
-/*Los iconos son bx*/
+/* =================================HOME============================= */
 
 .main__home-presentation {
     display: flex;
@@ -181,6 +180,9 @@ section {
     clip-path: circle(50%);
 }
 
+
+/* =================================ABOUT ME============================= */
+
 .main__about-me {
     display: flex;
     flex-wrap: wrap;
@@ -203,6 +205,9 @@ video {
     width: 95%;
 }
 
+
+/* =================================SKILLS============================= */
+
 .main__skills {
     display: flex;
 }
@@ -210,12 +215,12 @@ video {
 .main__skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .skills-container {
     display: flex;
     flex-wrap: nowrap;
+    overflow: hidden;
     flex-direction: row;
     justify-content: flex-start;
     gap: 5px;
@@ -241,6 +246,10 @@ video {
     justify-items: flex-end;
 }
 
+#skills-visible-dropdown {
+    display: none;
+}
+
 .skills-visible-dropdown {
     display: flex;
     flex-wrap: wrap;
@@ -248,19 +257,48 @@ video {
     justify-content: space-between;
     align-items: center;
     user-select: none;
+    cursor: pointer;
     min-width: 240px;
 }
 
-.skills-open {
-    height: max-content;
+.skills-visible-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    min-width: 240px;
 }
 
-.skills-closed {
-    height: 0;
-    overflow: hidden;
+#skills-dropdown-1,
+#skills-dropdown-2,
+#skills-dropdown-3 {
+    display: none;
 }
 
-.rotate-arrow {
+#skills-dropdown-1:checked~#skill-1 {
+    max-height: 160px;
+}
+
+#skills-dropdown-1:checked~.skills-visible-dropdown #arrow-1 {
+    transform: rotate(180deg);
+}
+
+#skills-dropdown-2:checked~#skill-2 {
+    max-height: 160px;
+}
+
+#skills-dropdown-2:checked~.skills-visible-dropdown #arrow-2 {
+    transform: rotate(180deg);
+}
+
+#skills-dropdown-3:checked~#skill-3 {
+    max-height: 160px;
+}
+
+#skills-dropdown-3:checked~.skills-visible-dropdown #arrow-3 {
     transform: rotate(180deg);
 }
 
@@ -268,10 +306,10 @@ video {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 100%;
-    transform-origin: top;
     font-size: var(--font-small);
-    transition: transform .3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
 }
 
 .skills-details {
@@ -351,6 +389,9 @@ video {
     border-radius: 20px;
     background-color: var(--main-color);
 }
+
+
+/* =================================PORTFOLIO============================= */
 
 .main__portfolio {
     display: flex;
@@ -462,6 +503,9 @@ video {
     }
 }
 
+
+/* =================================CONTACT FORM============================= */
+
 .main__contact {
     display: flex;
     flex-direction: column;
@@ -542,6 +586,9 @@ textarea {
     opacity: 1;
 }
 
+
+/* =================================FOOTER============================= */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -572,6 +619,9 @@ footer {
     margin-top: 5%;
 }
 
+
+/* =================================CAMBIO DE PANTALLA============================= */
+
 @media screen and (min-width: 990px) {
     * {
         scroll-margin-top: 8em;
@@ -582,6 +632,7 @@ footer {
     footer {
         width: 100%;
     }
+    /* =================================NAVBAR============================= */
     .nav-button {
         display: none;
     }
@@ -613,6 +664,7 @@ footer {
         padding-left: 0.5rem !important;
         padding-right: 0.5rem !important;
     }
+    /* =================================MAIN============================= */
     main {
         flex-grow: 2;
     }
@@ -651,6 +703,7 @@ footer {
         grid-column: 2/3;
         grid-row: 1/1;
     }
+    /* =================================ABOUT ME============================= */
     .main__about-me {
         padding-top: 0;
     }
@@ -669,18 +722,13 @@ footer {
         grid-column: 1/2;
         margin-left: 0;
     }
+    /* =================================SKILLS============================= */
     .main__skills {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         padding: 5%;
-    }
-    .main__portfolio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
     }
     .main__skills-container {
         margin-top: 2%;
@@ -707,12 +755,20 @@ footer {
     .skills-details span {
         font-size: var(--font-small);
     }
+    /* =================================PORTFOLIO============================= */
+    .main__portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
     .main__portfolio-container {
         font-size: var(--dk-bigger);
         grid-template-columns: 85px 1fr 85px;
         align-items: center;
         max-width: 70vw;
     }
+    /* =================================CONTACT FORM============================= */
     .main__contact {
         margin-top: 2.5%;
     }
@@ -730,6 +786,7 @@ footer {
     .scroll-top {
         font-size: 20px;
     }
+    /* =================================FOOTER============================= */
     footer {
         padding: 2%;
     }

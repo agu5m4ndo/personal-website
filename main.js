@@ -5,9 +5,8 @@ let language = document.getElementById("language"),
     languageIndicator = document.getElementById("lang");
 
 //dropdown variables
-let dropdownSkill = document.getElementsByClassName("skills-visible-dropdown"),
-    skillDetails = document.getElementsByClassName("skills-details-container"),
-    arrowSkill = document.getElementsByClassName("bx-chevron-down");
+let dropdownSkill1 = document.getElementById("skills-dropdown-1"),
+    dropdownSkill2 = document.getElementById("skills-dropdown-2");
 
 //slider variables
 let arrowLeft = document.getElementsByClassName("bx-chevron-left"),
@@ -75,29 +74,18 @@ function cambioLanguage() {
 language.addEventListener("click", cambioLanguage, true);
 
 //skills dropdown
-for (let index = 0; index < dropdownSkill.length; index++) {
-    dropdownSkill[index].addEventListener("click", function() {
-        if (skillDetails[index].classList.contains("skills-open")) {
-            skillDetails[index].classList.add("skills-closed");
-            skillDetails[index].classList.remove("skills-open");
-            arrowSkill[index].classList.remove("rotate-arrow");
-            if (skillDetails[0].classList.contains("skills-closed")) {
-                document.documentElement.style.setProperty("--row-size", "63px");
-            } else {
-                document.documentElement.style.setProperty("--row-size", "auto");
-            }
-        } else {
-            skillDetails[index].classList.add("skills-open");
-            skillDetails[index].classList.remove("skills-closed");
-            arrowSkill[index].classList.add("rotate-arrow");
-            if (skillDetails[0].classList.contains("skills-closed")) {
-                document.documentElement.style.setProperty("--row-size", "63px");
-            } else {
-                document.documentElement.style.setProperty("--row-size", "auto");
-            }
-        }
-    });
-}
+
+
+
+dropdownSkill1.addEventListener("click", function() {
+    if (dropdownSkill1.checked) {
+        document.documentElement.style.setProperty("--row-size", "auto");
+    } else {
+        setTimeout(() => {
+            document.documentElement.style.setProperty("--row-size", "73.5px");
+        }, 300);
+    }
+});
 
 //portfolio slider right
 function slideRight() {
@@ -109,7 +97,6 @@ function slideRight() {
                 portfolioArray[index].classList.remove("leave-right");
             }, 300);
             contador++;
-            console.log(contador + ", " + linksArray[contador]);
             portfolioItem[portfolioItem.length - 1].href = linksArray[contador];
             portfolioArray[index + 1].classList.add("arrive-right");
             portfolioArray[index + 1].classList.add("show-portfolio");
@@ -134,7 +121,6 @@ function slideLeft() {
             portfolioArray[index - 1].classList.add("arrive-left");
             portfolioArray[index - 1].classList.add("show-portfolio");
             contador--;
-            console.log(contador + ", " + linksArray[contador]);
             portfolioItem[portfolioItem.length - 1].href = linksArray[contador];
             setTimeout(() => {
                 portfolioArray[index - 1].classList.remove("arrive-left");
