@@ -68,7 +68,7 @@ function cambioLanguage() {
     if (languageIndicator.innerHTML == "Es") {
         location.href = "en/paginaResponsive.html";
     } else {
-        location.href = "../paginaResponsive.html";
+        location.href = "../index.html";
     }
 }
 language.addEventListener("click", cambioLanguage, true);
