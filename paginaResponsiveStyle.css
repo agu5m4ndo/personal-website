@@ -287,7 +287,7 @@ video {
 }
 
 #skills-dropdown-2:checked~#skill-2 {
-    max-height: 160px;
+    max-height: 250px;
 }
 
 #skills-dropdown-2:checked~.skills-visible-dropdown #arrow-2 {
@@ -337,19 +337,25 @@ video {
 }
 
 .skill-html-bar {
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
     background-color: var(--main-color);
 }
 
 .skill-css-bar {
-    width: 70%;
+    width: 80%;
     border-radius: 20px;
     background-color: var(--main-color);
 }
 
 .skill-javascript-bar {
-    width: 30%;
+    width: 80%;
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
+.skill-node-bar {
+    width: 50%;
     border-radius: 20px;
     background-color: var(--main-color);
 }
@@ -361,7 +367,7 @@ video {
 }
 
 .skill-springboot-bar {
-    width: 60%;
+    width: 50%;
     border-radius: 20px;
     background-color: var(--main-color);
 }

@@ -74,9 +74,6 @@ function cambioLanguage() {
 language.addEventListener("click", cambioLanguage, true);
 
 //skills dropdown
-
-
-
 dropdownSkill1.addEventListener("click", function() {
     if (dropdownSkill1.checked) {
         document.documentElement.style.setProperty("--row-size", "auto");
