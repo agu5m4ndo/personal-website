@@ -355,19 +355,19 @@ video {
 }
 
 .skill-node-bar {
-    width: 50%;
+    width: 70%;
     border-radius: 20px;
     background-color: var(--main-color);
 }
 
-.skill-java-bar {
-    width: 80%;
+.skill-express-bar {
+    width: 60%;
     border-radius: 20px;
     background-color: var(--main-color);
 }
 
-.skill-springboot-bar {
-    width: 50%;
+.skill-mongodb-bar {
+    width: 40%;
     border-radius: 20px;
     background-color: var(--main-color);
 }
